@@ -7,6 +7,7 @@ declare global {
       version?: string
       calculateLighting?: string
       mode?: string
+      originalLevelFiles?: string
     }
   }
 }
