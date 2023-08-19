@@ -1,0 +1,41 @@
+{
+  "name": "arx-map-restored-outpost-and-tavern",
+  "version": "1.0.0",
+  "description": "An alternative version of the Outpost/Tavern level of Arx Fatalis aiming to restore how it looked during the game's development",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "generate": "tsc && tsc-alias && node ./dist/src/index.js",
+    "generate:with-dotenv": "tsc && tsc-alias && node -r dotenv/config ./dist/src/index.js",
+    "rungame": "~/projektek/arx/ArxLibertatis/build/arx --loadlevel 1",
+    "dev": "npm run generate:with-dotenv && npm run rungame",
+    "prod": "export mode=\"production\" && npm run generate:with-dotenv && npm run rungame",
+    "release:normal": "npm run generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meszaros-lajos-gyorgy/arx-map-restored-outpost-and-tavern.git"
+  },
+  "keywords": [
+    "arx-fatalis"
+  ],
+  "author": "Lajos Mészáros <m_lajos@hotmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/meszaros-lajos-gyorgy/arx-map-restored-outpost-and-tavern/issues"
+  },
+  "homepage": "https://github.com/meszaros-lajos-gyorgy/arx-map-restored-outpost-and-tavern#readme",
+  "dependencies": {
+    "arx-convert": "^7.0.1",
+    "arx-level-generator": "^1.9.0",
+    "dotenv": "^16.3.1",
+    "three": "^0.155.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/node": "^20.5.1",
+    "@types/three": "^0.155.0",
+    "tsc-alias": "^1.8.7",
+    "typescript": "^5.1.6"
+  }
+}
