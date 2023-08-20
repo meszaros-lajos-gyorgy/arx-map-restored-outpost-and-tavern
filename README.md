@@ -10,7 +10,7 @@ An alternative version of the Outpost/Tavern level of Arx Fatalis aiming to rest
 ![beta tavern screenshot #2](docs/tavern-02.jpg?raw=true 'beta tavern screenshot #2')
 ![beta tavern screenshot #3](docs/tavern-03.jpg?raw=true 'beta tavern screenshot #3')
 
-![tavern artwork](docs/tavern-03.jpg?raw=true 'tavern artwork')
+![tavern artwork](docs/tavern-artwork.jpg?raw=true 'tavern artwork')
 
 ### How it looks now
 
