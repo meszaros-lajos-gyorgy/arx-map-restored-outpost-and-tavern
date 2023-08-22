@@ -7,8 +7,10 @@
   "scripts": {
     "generate": "tsc && tsc-alias && node ./dist/src/index.js",
     "generate:with-dotenv": "tsc && tsc-alias && node -r dotenv/config ./dist/src/index.js",
-    "rungame": "~/projektek/arx/ArxLibertatis/build/arx --loadlevel 12",
+    "rungame": "~/projektek/arx/insanity/ArxLibertatis/build/arx --loadlevel 12",
+    "rungame:noclip": "~/projektek/arx/insanity/ArxLibertatis/build/arx --loadlevel 12 --noclip",
     "dev": "npm run generate:with-dotenv && npm run rungame",
+    "dev:noclip": "npm run generate:with-dotenv && npm run rungame:noclip",
     "prod": "export mode=\"production\" && npm run generate:with-dotenv && npm run rungame",
     "release:normal": "npm run generate"
   },
