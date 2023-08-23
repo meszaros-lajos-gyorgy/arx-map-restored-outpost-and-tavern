@@ -13,6 +13,7 @@ const addNorthCobbleWall = (map: ArxMap) => {
     size: northWallSize,
     orientation: new Rotation(MathUtils.degToRad(90), 0, 0),
     texture: stoneHumanWall2a,
+    uvScale: new Vector2(0.25, 0.25),
   })
 }
 
@@ -24,8 +25,9 @@ const addSouthCobbleWall = (map: ArxMap) => {
   addPlane(map, {
     position: southWallPos,
     size: southWallSize,
-    orientation: new Rotation(MathUtils.degToRad(90), 0, 0),
+    orientation: new Rotation(MathUtils.degToRad(-90), 0, 0),
     texture: stoneHumanWall2a,
+    uvScale: new Vector2(0.3, 0.3),
   })
 }
 
@@ -35,6 +37,7 @@ const addWestStoneWall = (map: ArxMap) => {
     size: new Vector2(1370, 200 + 500),
     orientation: new Rotation(MathUtils.degToRad(90), 0, MathUtils.degToRad(90)),
     texture: stoneHumanWall5b,
+    uvScale: new Vector2(0.4, 0.4),
   })
 }
 
@@ -44,6 +47,7 @@ const addEastStoneWall = (map: ArxMap) => {
     size: new Vector2(1370 / 2, 200 + 500),
     orientation: new Rotation(MathUtils.degToRad(90), 0, MathUtils.degToRad(-90)),
     texture: stoneHumanWall5b,
+    uvScale: new Vector2(0.4, 0.4),
   })
 }
 
@@ -98,6 +102,7 @@ const addNorthRoof = (map: ArxMap) => {
     size: northLowerRoofSize,
     orientation: new Rotation(MathUtils.degToRad(90 + northLowerRoofAngle), 0, 0),
     texture: stoneHumanWall5a,
+    uvScale: new Vector2(0.4, 0.4),
   })
 
   addPlane(map, {
@@ -168,6 +173,7 @@ const addSouthRoof = (map: ArxMap) => {
     size: southLowerRoofSize,
     orientation: new Rotation(MathUtils.degToRad(-90 + southLowerRoofAngle), 0, 0),
     texture: stoneHumanWall5a,
+    uvScale: new Vector2(0.4, 0.4),
   })
 
   addPlane(map, {
