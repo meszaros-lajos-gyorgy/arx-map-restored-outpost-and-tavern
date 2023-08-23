@@ -10,10 +10,9 @@ type addPlaneProps = {
   size: Vector2
   texture: Texture
   uvScale?: Vector2
-  uvRotate?: number
 }
 
-export const addPlane = (map: ArxMap, { position, orientation, size, texture, uvScale, uvRotate }: addPlaneProps) => {
+export const addPlane = (map: ArxMap, { position, orientation, size, texture, uvScale }: addPlaneProps) => {
   const plane = createPlaneMesh({ size, texture })
 
   if (orientation) {
@@ -32,10 +31,6 @@ export const addPlane = (map: ArxMap, { position, orientation, size, texture, uv
 
   if (uvScale) {
     scaleUV(uvScale, plane.geometry)
-  }
-
-  if (uvRotate) {
-    // TODO
   }
 
   map.polygons.addThreeJsMesh(plane, { tryToQuadify: DONT_QUADIFY, shading: SHADING_FLAT })
