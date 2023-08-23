@@ -6,6 +6,8 @@ const stoneHumanWall2a = new Texture({ filename: '[stone]_human_wall2a.jpg' })
 const stoneHumanWall2b = new Texture({ filename: '[stone]_human_wall2b.jpg' })
 const stoneHumanWall5a = new Texture({ filename: '[stone]_human_wall5a.jpg' })
 const stoneHumanWall5b = new Texture({ filename: '[stone]_human_wall5b.jpg' })
+const woodBlacksmithCeiling1 = new Texture({ filename: '[wood]_blacksmith_ceiling1' })
+const woodBlacksmithCeiling2 = new Texture({ filename: '[wood]_blacksmith_ceiling2' })
 const woodDoor = new Texture({ filename: '(wood) door.bmp' })
 const woodHumanDirtPlanks = new Texture({ filename: '[wood]_human_dirt_planks.jpg' })
 
@@ -116,9 +118,9 @@ const addNorthRoof = (map: ArxMap) => {
 
   addPlane(map, {
     position: northUpperRoof2Pos,
-    size: northUpperRoof2Size,
-    orientation: new Rotation(MathUtils.degToRad(90 + northUpperRoof2Angle), 0, 0),
-    texture: woodHumanDirtPlanks,
+    size: new Vector2(northUpperRoof2Size.y, northUpperRoof2Size.x),
+    orientation: new Rotation(MathUtils.degToRad(90 + northUpperRoof2Angle), MathUtils.degToRad(90), 0),
+    texture: woodBlacksmithCeiling1,
     uvScale: new Vector2(0.5, 0.5),
   })
 }
@@ -186,9 +188,9 @@ const addSouthRoof = (map: ArxMap) => {
 
   addPlane(map, {
     position: southUpperRoof2Pos,
-    size: southUpperRoof2Size,
-    orientation: new Rotation(MathUtils.degToRad(-90 + southUpperRoof2Angle), 0, 0),
-    texture: woodHumanDirtPlanks,
+    size: new Vector2(southUpperRoof2Size.y, southUpperRoof2Size.x),
+    orientation: new Rotation(MathUtils.degToRad(-90 + southUpperRoof2Angle), MathUtils.degToRad(90), 0),
+    texture: woodBlacksmithCeiling1,
     uvScale: new Vector2(0.5, 0.5),
   })
 }
