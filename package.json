@@ -1,6 +1,6 @@
 {
   "name": "arx-map-restored-outpost-and-tavern",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An alternative version of the Outpost/Tavern level of Arx Fatalis aiming to restore how it looked during the game's development",
   "main": "src/index.ts",
   "type": "module",
