@@ -8,5 +8,9 @@ export const addUpstairsFloor = (map: ArxMap) => {
   const yPos = 826.5
   const floor1Box = new Box2(new Vector2(8735, 12789), new Vector2(9402, 13550))
 
+  const offsetX = 1500
+  const floor2Box = new Box2(new Vector2(8735 + offsetX, 12789), new Vector2(9402 + offsetX, 13550))
+
   fillFloor(floor1Box, yPos, woodFloor, map)
+  fillFloor(floor2Box, yPos, woodFloor, map)
 }
