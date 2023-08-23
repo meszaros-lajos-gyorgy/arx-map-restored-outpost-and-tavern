@@ -12,7 +12,7 @@
     "dev": "npm run generate:with-dotenv && npm run rungame",
     "dev:noclip": "npm run generate:with-dotenv && npm run rungame:noclip",
     "prod": "export mode=\"production\" && npm run generate:with-dotenv && npm run rungame",
-    "release:normal": "npm run generate:with-dotenv"
+    "release:normal": "export levelIdx=\"12\" && npm run generate"
   },
   "repository": {
     "type": "git",
