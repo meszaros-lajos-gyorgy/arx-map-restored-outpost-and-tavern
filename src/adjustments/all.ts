@@ -4,6 +4,6 @@ import { makePolygonsDoubleSided } from '@/tools/makePolygonsDoubleSided.js'
 
 export const adjustAll = (map: ArxMap) => {
   map.removePortals()
-  addSky(map)
+  // addSky(map)
   makePolygonsDoubleSided(map)
 }

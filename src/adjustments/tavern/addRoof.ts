@@ -10,7 +10,7 @@ const woodDoor = new Texture({ filename: '(wood) door.bmp' })
 const woodHumanDirtPlanks = new Texture({ filename: '[wood]_human_dirt_planks.jpg' })
 
 const addNorthCobbleWall = (map: ArxMap) => {
-  const wallWidth = 1150
+  const wallWidth = 3000 // 1150
   const northWallPos = new Vector3(8250 + wallWidth / 2, 700, 13550)
   const northWallSize = new Vector2(wallWidth, 200)
 
@@ -23,7 +23,7 @@ const addNorthCobbleWall = (map: ArxMap) => {
 }
 
 const addSouthCobbleWall = (map: ArxMap) => {
-  const wallWidth = 1150
+  const wallWidth = 2200 // 1150
   const southWallPos = new Vector3(8250 + wallWidth / 2, 700, 12200)
   const southWallSize = new Vector2(wallWidth, 200)
 
@@ -44,8 +44,17 @@ const addWestStoneWall = (map: ArxMap) => {
   })
 }
 
+const addEastStoneWall = (map: ArxMap) => {
+  addPlane(map, {
+    position: new Vector3(8260 + 2190, 700 - 250, 12855 - 1370 / 4 + 15),
+    size: new Vector2(1370 / 2, 200 + 500),
+    orientation: new Rotation(MathUtils.degToRad(90), 0, MathUtils.degToRad(-90)),
+    texture: stoneHumanWall5b,
+  })
+}
+
 const addNorthRoof = (map: ArxMap) => {
-  const roofWidth = 2500
+  const roofWidth = 3000
 
   const northWallPos = new Vector3(8250 + roofWidth / 2, 700, 13550)
   const northWallSize = new Vector2(roofWidth, 200)
@@ -115,7 +124,7 @@ const addNorthRoof = (map: ArxMap) => {
 }
 
 const addSouthRoof = (map: ArxMap) => {
-  const roofWidth = 2500
+  const roofWidth = 2200
 
   const southWallPos = new Vector3(8250 + roofWidth / 2, 700, 12200)
   const southWallSize = new Vector2(roofWidth, 200)
@@ -186,6 +195,7 @@ const addSouthRoof = (map: ArxMap) => {
 
 export const addRoof = (map: ArxMap) => {
   addWestStoneWall(map)
+  addEastStoneWall(map)
 
   addNorthCobbleWall(map)
   addSouthCobbleWall(map)
