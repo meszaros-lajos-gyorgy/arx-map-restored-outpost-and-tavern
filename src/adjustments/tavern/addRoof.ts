@@ -1,18 +1,10 @@
-import { ArxMap, Rotation, Texture, Vector3 } from 'arx-level-generator'
+import { ArxMap, Rotation, Vector3 } from 'arx-level-generator'
 import { MathUtils, Vector2 } from 'three'
+import { stoneHumanWall2a, stoneHumanWall5a, stoneHumanWall5b, woodBlacksmithCeiling1, woodDoor } from '@/textures.js'
 import { addPlane } from '@/tools/addPlane.js'
 
-const stoneHumanWall2a = new Texture({ filename: '[stone]_human_wall2a.jpg' })
-const stoneHumanWall2b = new Texture({ filename: '[stone]_human_wall2b.jpg' })
-const stoneHumanWall5a = new Texture({ filename: '[stone]_human_wall5a.jpg' })
-const stoneHumanWall5b = new Texture({ filename: '[stone]_human_wall5b.jpg' })
-const woodBlacksmithCeiling1 = new Texture({ filename: '[wood]_blacksmith_ceiling1' })
-const woodBlacksmithCeiling2 = new Texture({ filename: '[wood]_blacksmith_ceiling2' })
-const woodDoor = new Texture({ filename: '(wood) door.bmp' })
-const woodHumanDirtPlanks = new Texture({ filename: '[wood]_human_dirt_planks.jpg' })
-
 const addNorthCobbleWall = (map: ArxMap) => {
-  const wallWidth = 3000 // 1150
+  const wallWidth = 3000
   const northWallPos = new Vector3(8250 + wallWidth / 2, 700, 13550)
   const northWallSize = new Vector2(wallWidth, 200)
 
@@ -25,7 +17,7 @@ const addNorthCobbleWall = (map: ArxMap) => {
 }
 
 const addSouthCobbleWall = (map: ArxMap) => {
-  const wallWidth = 2200 // 1150
+  const wallWidth = 1640
   const southWallPos = new Vector3(8250 + wallWidth / 2, 700, 12200)
   const southWallSize = new Vector2(wallWidth, 200)
 
