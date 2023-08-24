@@ -4,7 +4,7 @@ declare global {
       outputDir?: string
       levelIdx?: string
       seed?: string
-      version?: string
+      variant?: string
       calculateLighting?: string
       mode?: string
       originalLevelFiles?: string
