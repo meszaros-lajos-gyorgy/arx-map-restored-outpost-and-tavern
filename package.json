@@ -6,13 +6,12 @@
   "type": "module",
   "scripts": {
     "generate": "tsc && tsc-alias && node ./dist/src/index.js",
-    "generate:with-dotenv": "tsc && tsc-alias && node -r dotenv/config ./dist/src/index.js",
     "rungame": "~/projektek/arx/insanity/ArxLibertatis/build/arx --loadlevel 12",
     "rungame:noclip": "~/projektek/arx/insanity/ArxLibertatis/build/arx --loadlevel 12 --noclip",
-    "dev": "npm run generate:with-dotenv && npm run rungame",
-    "dev:noclip": "npm run generate:with-dotenv && npm run rungame:noclip",
-    "prod": "export mode=\"production\" && npm run generate:with-dotenv && npm run rungame",
-    "release:normal": "npm run generate"
+    "dev": "npm run generate && npm run rungame",
+    "dev:noclip": "npm run generate && npm run rungame:noclip",
+    "prod": "export mode=\"production\" && npm run generate && npm run rungame",
+    "release:normal": "export outputDir=\"./output\" && export mode=\"production\" && npm run generate"
   },
   "repository": {
     "type": "git",
@@ -29,8 +28,7 @@
   "homepage": "https://github.com/meszaros-lajos-gyorgy/arx-map-restored-outpost-and-tavern#readme",
   "dependencies": {
     "arx-convert": "^7.1.0",
-    "arx-level-generator": "^1.10.1",
-    "dotenv": "^16.3.1",
+    "arx-level-generator": "^1.11.0-beta.0",
     "three": "^0.155.0"
   },
   "devDependencies": {
