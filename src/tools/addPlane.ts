@@ -2,7 +2,7 @@ import { ArxMap, DONT_QUADIFY, Rotation, SHADING_FLAT, Texture, Vector3 } from '
 import { createPlaneMesh } from 'arx-level-generator/prefabs/mesh'
 import { scaleUV } from 'arx-level-generator/tools/mesh'
 import { applyTransformations } from 'arx-level-generator/utils'
-import { MathUtils, Vector2 } from 'three'
+import { Vector2 } from 'three'
 
 type addPlaneProps = {
   position?: Vector3
